@@ -1,0 +1,12 @@
+
+数据库连接信息需要换掉：
+
+localhost:3307
+localhost:3306
+
+买家账号 dyyoul0441@sandbox.com
+登录密码 111111
+支付密码 111111
+
+
+

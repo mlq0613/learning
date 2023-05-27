@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/dy_db?userSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+server:
+  port: 8888
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+shiro-redis:
+  enable: true
+  redis-manager:
+    host: 127.0.0.1:6379
+markerhub:
+  jwt:
+    #加密
+    secret: 1a2b3c4d5e
+    #
+    expire: 604800
+    header: Authorization
+alipay:
+  appId: 21003192692431
+  appPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHFAUh+iD/O3TBKdzfl1SJNbp+DN74zAQQuerkmtl/4MBIyH+/7iAqBB7YFqj6liXkKLQENa7BcKKn7KuMzJGIUtnuCuD+9Jr4VoPZEzzIxEADbH2ol6GWsxZjN43CuY63b4/1KX9yj/1MQ5pR7XS/+iDs0aO5bnL8wy9ZvcOC8Bz+VMPyrOtpRHSoBN+5TgBy/BAOizRxZbh0QLMK/Hz3aPu1UTNQHfBQNNQUCk6UrP6HaEz9Da38td+miLVAas/0y8z2umNPMS8Kj6Vl1WCyGRFbh642AlwzJlRyYr7dejjUtbNd3kybQoAbl9eQdXduRpYXt7teVAo057BymGVrAgMBAAECggEAdH/cyWgcS2UxFmQPnju7ajePp6VcLUJwAykGILI5AiSKUnuySouK7BHvtDke9jjHZ1d/ot3V4fpOHvxtHJtWrTefw8FYOiwm+CZNwsvnsdQozYsleWGFuR6uIVZJindVUnoCs9RdmiX7tWncz+o3tld5TCamyYgr3jpNPV4AII3C0nZB5ync2mI53Wgp1txIGpJ3BPcK37ZyjLOc6mDIhrcwRTsCTp3gevTlSWpnlWtcFGDOArHivt1u/Icz140t/wPumYDm9nZlkCQ/YSP40o0xiocBmOSu8ueRe643bMAZw8uvlPLEgesTIHGAVwKwBn8sFLFu79TLqb55D6pc8QKBgQDsE4jwJScQsonSf2DWODJwNa33IbKnKP9N7gj1mlmMqPB1KBfZVpekuATPfTVwgq3KusVIXeYhklt5Tai3yvglOvAMBtPpOfJL5BeXIOKqC5z6YuEnhb27877eqmSLfK7Dgfe/Fe5wT6uRfh0J4yo15RuE8T3N5qI7qD8rHcim8wKBgQCSemfN7TgB8almIseqqzST9oxlu5UQZc+PBPN7tEjw194meANKEfHgEbT6fgpbQsH7/0S5bm0Rkq8omgoKlv/mmtDqzWrygaFw6NsE9vkXNYFpOeBk7cpeCu+1SHQ73tC++MvFWOfxCRu+fHyWwR9T6zD4aa1biIRXWEc9k17VqQKBgQDUk16ah4newjXSgvqqyx235s5Im2JonUUPYklVBvCd9T3Y8QpQnWWdYEqMn71wG2vtAjNFT7A7CLQvzZsgLLc3pxOicL9+4rvoVHJdlrIj1qM637DIyugnh3uWuy4gYFxqFe0FdvUm0sa2Ey6IybInp68ZDbXOY2Awgfanl4EnuwKBgHr9dHOgH0rikw5DXcub/YXPmotBOiSOl/zKd3cDJcu0Nb+vPXPQJXuy4ncBpciDAUaKTDY21jXPKGu7C3tg1nXWwFynJomA9wFLQ7ujc/tc3dBw3E1irGzSWfupXo92w2fWl6KYyAfHUhhbhnE+rwNTk8bBVOJqelSstwSo3RQhAoGAKSdO/rTd1iZaLG21OPdAdsIvFYF+duEfhjWX30rlYzY6USmdzx7/I6PExoyElFoqyVBGr2BndOuwWVHug+T4JlTuvkCTJJF3gHUP0uJLdtJVN9xcaYC4Ft8Q2qVGpMdcUsn6TjwiAp6lAMAWyF9xMtpy+BPvj5SwiBcVVPeArfk=
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkL31ZMSRKd+FNnen3SmHGwuNIq2nN4sSse57LBxqP/HBSbQHix6osFLpC3XcZDwdno4wafza+7w18OhEbaQV6JdiycHf5iIn3t8tcuLAOBCB6Y+V5Yiu3/R7eWu+/x3enVMBq+oIQUm6o4zPyB2ByOW/xX+JtPoVW2UpoT282IvskZ0hDCxPRBQH3FL4i2UW9GvCzQFLCsx1hwDcmuA/I2Va6ZpTF1IACOHhQocPlkknGgN0X61Jn6c+pCQv7cJtNW7kosrFsCJhYJvDHW+UAlFbarVCNKHGFozX+iKj/vS+k9aoGDOOSS/9ZOSRhDVkW+Yu9hossM0/YqyXQoeI+QIDAQAB
+  notifyUrl: http://localhost/alipay/notify
